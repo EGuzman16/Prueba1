@@ -1,14 +1,12 @@
 import './App.css';
-import ExplorePage from './pages/explore/ExplorePage';
+import DetailPage from './pages/detail/DetailPage';
 import HomePage from './pages/home/HomePage';
-
 
 function App() {
   return (
     <div className="App">
-       <ExplorePage /> 
- 
-    
+      <DetailPage />
+
     </div>
   );
 }

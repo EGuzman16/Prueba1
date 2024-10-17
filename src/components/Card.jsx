@@ -16,7 +16,7 @@ const Card = () => {
     };
 
     return (
-        <div className="card bg-white shadow-lg rounded-lg overflow-hidden relative"> {/* Ajusta la altura aquí */}
+        <div className="card bg-white shadow-lg rounded-lg overflow-hidden relative"> 
             <div className="image-container w-full h-50 relative">
                 <img src={image} alt={title} className="w-full h-full object-cover" />
                 <div 
