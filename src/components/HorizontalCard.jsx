@@ -27,7 +27,7 @@ const HorizontalCard = ({ image = kanto, title = "Kanto", city = "Ciudad", ratin
                 <div>
                     <h4 className="text-xl" style={{ color: titleColor }}>{title} <span className="text-gray-500">({city})</span></h4>
                     <div className="flex items-center my-2" style={{ color: borderColor }}>
-                        <StarRatingComponent 
+                        <StarRatingComponent
                             name="rate1"
                             starCount={5}
                             value={rating}
@@ -41,31 +41,34 @@ const HorizontalCard = ({ image = kanto, title = "Kanto", city = "Ciudad", ratin
                     </div>
                     <p className="text-gray-700 my-2">{description}</p>
                 </div>
-                <div className="flex justify-center">
-    <button className="w-1/2 py-2 rounded-full mt-4 text-center" style={{ backgroundColor: buttonColor, color: 'white' }}>
+                <div className="flex flex-col md:flex-row justify-center items-center md:items-start">
+    <button className="w-1/3 py-2 rounded-full mt-4 text-center md:mr-2" style={{ backgroundColor: buttonColor, color: 'white' }}>
         Ver más
+    </button>
+    <button className="w-2/3 py-2 rounded-full mt-4 text-center md:ml-2" style={{ backgroundColor: '#FF4A5A', color: 'white' }}>
+        Cargar a itinerario
     </button>
 </div>
             </div>
 
             {/* Tercera Columna: Like y Precio */}
             <div className="hidden md:flex w-full md:w-1/5 p-4 flex-col justify-between">
-    <div className="flex justify-center">
-        <div 
-            className="p-4 rounded-full cursor-pointer"   
-            style={{ 
-                backgroundColor: likeColor, 
-                border: `2px solid ${likeColor}` 
-            }}
-            onClick={toggleLike}
-        >
-            {liked ? <FaHeart color="white" size={24} /> : <FaRegHeart color="white" size={24} />}  
-        </div>
-    </div>
-    <div className="flex justify-center">
-        <p className="text-xl font-bold" style={{ color: likeColor }}>{price}</p>   
-    </div>
-</div>
+                <div className="flex justify-center">
+                    <div
+                        className="p-4 rounded-full cursor-pointer"
+                        style={{
+                            backgroundColor: likeColor,
+                            border: `2px solid ${likeColor}`
+                        }}
+                        onClick={toggleLike}
+                    >
+                        {liked ? <FaHeart color="white" size={24} /> : <FaRegHeart color="white" size={24} />}
+                    </div>
+                </div>
+                <div className="flex justify-center">
+                    <p className="text-xl font-bold" style={{ color: likeColor }}>{price}</p>
+                </div>
+            </div>
         </div>
     );
 };
