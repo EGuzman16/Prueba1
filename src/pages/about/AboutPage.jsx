@@ -12,7 +12,11 @@ const AboutPage = () => {
         <Seccion1 />
         <Seccion2 />
         <Seccion3 />
+<<<<<<< HEAD
         <Seccion4 />
+=======
+        <Seccion4 />     
+>>>>>>> f88125b807e747b01e03863d3e047eb7352660e9
     </MainLayout>
 };
 
