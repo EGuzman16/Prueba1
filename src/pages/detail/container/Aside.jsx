@@ -39,7 +39,11 @@ const Aside = () => {
                 <iframe
                     src={info.mapaEmbedUrl}
                     width="100%"
+<<<<<<< HEAD
                     height="100%" 
+=======
+                    height="100%"   
+>>>>>>> f9ba03f1430943580aafec04b89b3d58a7523104
                     style={{ border: 0, position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
                     allowFullScreen=""
                     loading="lazy"
