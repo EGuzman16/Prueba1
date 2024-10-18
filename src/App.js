@@ -1,11 +1,11 @@
 import './App.css';
-import BlogPage from './pages/blog/BlogPage';
 import HomePage from './pages/home/HomePage';
+import RecoverPassPage from './pages/recoverPass/RecoverPassPage';
 
 function App() {
   return (
     <div className="App">
-      <BlogPage />
+      <RecoverPassPage />
 
     </div>
   );

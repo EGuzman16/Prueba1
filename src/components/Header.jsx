@@ -84,7 +84,7 @@ const Header = () => {
                     className={`${navIsVisible ? 'block' : 'hidden'
                         } md:flex flex-col md:flex-row gap-x-5 mt-8 md:mt-0`}
                 >
-                    <ul className="flex flex-col md:flex-row gap-x-5 items-center justify-center w-full">
+                    <ul className="flex flex-col md:flex-row gap-x-5 items-center justify-center md:pr-24 w-full">
                         {navItemsInfo.map((item) => (
                             <NavItem key={item.name} item={item} />
                         ))}
