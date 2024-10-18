@@ -7,17 +7,13 @@ import Seccion3 from './container/Seccion3';
 import Seccion4 from './container/Seccion4';
 
 const AboutPage = () => {
-    return <MainLayout>
-        <Hero />
-        <Seccion1 />
-        <Seccion2 />
-        <Seccion3 />
-<<<<<<< HEAD
-        <Seccion4 />
-=======
-        <Seccion4 />     
->>>>>>> f88125b807e747b01e03863d3e047eb7352660e9
-    </MainLayout>
+        return <MainLayout>
+                <Hero />
+                <Seccion1 />
+                <Seccion2 />
+                <Seccion3 />
+                <Seccion4 />
+        </MainLayout>
 };
 
 export default AboutPage

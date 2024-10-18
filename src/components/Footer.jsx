@@ -17,7 +17,7 @@ const Footer = () => {
     
     {/* Segunda Columna */}
     <div className="text-center  md:text-left md:ml-20">
-        <h3 className="font-bold mb-2">Mapa del sitio</h3>
+        <h5 className="font-bold mb-2">Mapa del sitio</h5>
         <ul>
             <li>Inicio</li>
             <li>Explora</li>
@@ -30,7 +30,7 @@ const Footer = () => {
     
     {/* Tercera Columna */}
     <div className="text-center md:text-left">
-        <h3 className="font-bold mb-2">Contacto</h3>
+        <h5 className="font-bold mb-2">Contacto</h5>
         <ul>
             <li className="flex justify-center md:justify-start items-center mb-2">
                 <IoHomeOutline className="mr-2" /> Dirección de la empresa 123
@@ -46,7 +46,7 @@ const Footer = () => {
     
     {/* Cuarta Columna */}
     <div className="text-center md:text-left">
-        <h3 className="font-bold mb-2">Redes Sociales</h3>
+        <h5 className="font-bold mb-2">Redes Sociales</h5>
         <div className="flex justify-center md:justify-start space-x-4 mb-2">
             <FaInstagram className="text-2xl md:text-4xl" />
             <SlSocialFacebook className="text-2xl md:text-3xl" />
