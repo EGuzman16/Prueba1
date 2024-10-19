@@ -40,7 +40,7 @@ const ArticleCarrusel = () => {
     return (
         <div className="article-carousel my-12">
             <h2 className="text-left pt-4 mb-4 text-2xl">Navega nuestras últimas noticias</h2>
-            <div className="cards-container flex justify-center flex-wrap">
+            <div className="cards-container flex justify-center flex-wrap p-6">
                 {currentCards.map((card, index) => (
                     <div key={index} className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 p-2">
                         {card}

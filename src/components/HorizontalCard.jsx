@@ -3,7 +3,7 @@ import StarRatingComponent from 'react-star-rating-component';
 import { FaStar, FaRegStar, FaHeart, FaRegHeart } from 'react-icons/fa';
 import kanto from '../assets/kanto.png';
 
-const HorizontalCard = ({ image = kanto, title = "Kanto", city = "Ciudad", rating = 4, comments = 10, description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ", price = "$300" }) => {
+const HorizontalCard = ({ image = kanto, title = "Kanto", prefecture = "Prefectura", rating = 4, comments = 10, description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ", price = "$300" }) => {
     const [liked, setLiked] = useState(false);
 
     const toggleLike = () => {
@@ -25,7 +25,7 @@ const HorizontalCard = ({ image = kanto, title = "Kanto", city = "Ciudad", ratin
             {/* Segunda Columna: Información */}
             <div className="w-full md:w-1/10 p-4 flex flex-col justify-between">
                 <div>
-                    <h4 className="text-xl" style={{ color: titleColor }}>{title} <span className="text-gray-500">({city})</span></h4>
+                    <h4 className="text-xl" style={{ color: titleColor }}>{title} <span className="text-gray-500">({prefecture})</span></h4>
                     <div className="flex items-center my-2" style={{ color: borderColor }}>
                         <StarRatingComponent
                             name="rate1"

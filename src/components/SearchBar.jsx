@@ -2,33 +2,29 @@ import React, { useState } from 'react'
 import { IoSearchOutline } from 'react-icons/io5'
 import { LuMapPin, LuMap } from 'react-icons/lu'
 
-const regionCities = {
-    "Hokkaido": ["Sapporo", "Hakodate", "Otaru", "Asahikawa", "Furano"],
-    "Kanto (Tokyo y alrededores)": ["Tokio", "Yokohama", "Kamakura", "Kawasaki", "Chiba"],
-    "Kansai (Kyoto, Osaka)": ["Kioto", "Osaka", "Nara", "Kobe", "Himeji"],
-    "Chubu (Monte Fuji, Alpes Japoneses)": ["Nagoya", "Kanazawa", "Takayama", "Matsumoto", "Fujinomiya"],
-    "Tohoku (Norte de Honshu)": ["Sendai", "Aomori", "Morioka", "Akita", "Fukushima"],
-    "Chugoku (Hiroshima)": ["Hiroshima", "Okayama", "Matsue", "Tottori", "Yamaguchi"],
-    "Shikoku": ["Matsuyama", "Takamatsu", "Tokushima", "Kochi", "Uwajima"],
-    "Kyushu": ["Fukuoka", "Nagasaki", "Kumamoto", "Beppu", "Kagoshima"],
-    "Okinawa y las Islas Ryukyu": ["Naha", "Ishigaki", "Miyako", "Nago", "Urasoe"]
+const islandPrefectures = {
+    "Hokkaido": ["Hokkaido"],
+    "Honshu": ["Tokyo", "Kanagawa", "Osaka", "Kyoto", "Nara", "Hyogo", "Shizuoka", "Aichi", "Fukushima", "Miyagi", "Niigata", "Nagano"],
+    "Shikoku": ["Ehime", "Kagawa", "Kochi", "Tokushima"],
+    "Kyushu": ["Fukuoka", "Kumamoto", "Kagoshima", "Oita", "Nagasaki", "Miyazaki", "Saga"],
+    "Okinawa": ["Okinawa"]
 };
 
-const regions = Object.keys(regionCities);
+const islands = Object.keys(islandPrefectures);
 
 const SearchBar = () => {
-    const [selectedRegion, setSelectedRegion] = useState("");
-    const [cities, setCities] = useState([]);
+    const [selectedIsland, setSelectedIsland] = useState("");
+    const [prefectures, setPrefectures] = useState([]);
 
-    const handleRegionChange = (event) => {
-        const region = event.target.value;
-        setSelectedRegion(region);
-        setCities(regionCities[region] || []);
+    const handleIslandChange = (event) => {
+        const island = event.target.value;
+        setSelectedIsland(island);
+        setPrefectures(islandPrefectures[island] || []);
     };
 
     return (
         <div>
-            <form className="flex flex-col gap-4 ">
+            <form className="flex flex-col gap-4">
                 <div className="flex flex-col md:flex-row md:items-center md:gap-4">
                     <div className="relative flex items-center w-full md:w-9/10 lg:w-19/20 mb-4 md:mb-0">
                         <IoSearchOutline className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#fa5564]" />
@@ -36,19 +32,19 @@ const SearchBar = () => {
                     </div>
                     <div className="relative flex items-center w-full md:w-2/3 lg:w-3/4 mb-4 md:mb-0">
                         <LuMapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#fa5564]" />
-                        <select onChange={handleRegionChange} className="pl-10 pr-4 py-2 rounded-full w-full text-sm md:text-base lg:text-base bg-[#D7EDFC]" style={{ color: '#4F4F4F' }}>
-                            <option value="">Región</option>
-                            {regions.map((region, index) => (
-                                <option key={index} value={region}>{region}</option>
+                        <select onChange={handleIslandChange} className="pl-10 pr-4 py-2 rounded-full w-full text-sm md:text-base lg:text-base bg-[#D7EDFC]" style={{ color: '#4F4F4F' }}>
+                            <option value="">Isla</option>
+                            {islands.map((island, index) => (
+                                <option key={index} value={island}>{island}</option>
                             ))}
                         </select>
                     </div>
                     <div className="relative flex items-center w-full md:w-3/4 lg:w-5/6 mb-4 md:mb-0">
                         <LuMap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#fa5564]" />
                         <select className="pl-10 pr-4 py-2 rounded-full w-full text-sm md:text-base lg:text-base bg-[#D7EDFC]" style={{ color: '#4F4F4F' }}>
-                            <option value="">Ciudades</option>
-                            {cities.map((city, index) => (
-                                <option key={index} value={city}>{city}</option>
+                            <option value="">Prefectura</option>
+                            {prefectures.map((prefecture, index) => (
+                                <option key={index} value={prefecture}>{prefecture}</option>
                             ))}
                         </select>
                     </div>
@@ -58,8 +54,7 @@ const SearchBar = () => {
                 </div>
             </form>
         </div>
-
     )
 }
 
-export default SearchBar
+export default SearchBar;

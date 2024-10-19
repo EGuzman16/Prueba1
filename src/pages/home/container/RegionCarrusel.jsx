@@ -12,14 +12,14 @@ import okinawa from '../../../assets/okinawa.png';
 
 const regions = [
     { name: 'Hokkaido', image: hokkaido },
-    { name: 'Tohoku', image: tohoku },
-    { name: 'Kanto', image: kanto },
-    { name: 'Chubu', image: chubu },
-    { name: 'Kansai', image: kansai },
-    { name: 'Chugoku', image: chugoku },
-    { name: 'Shikoku', image: shikoku },
-    { name: 'Kyushu', image: kyushu },
-    { name: 'Okinawa e Islas Ryukyu', image: okinawa }
+    { name: 'Honshu', image: kanto }, 
+    { name: 'Kyushu', image: kyushu },  
+    { name: 'Shikoku', image: shikoku },  
+    { name: 'Okinawa', image: okinawa },   
+    { name: 'Islas Ogasawara', image: tohoku }, 
+    { name: 'Islas Izu', image: chubu },  
+    { name: 'Isla Tsushima', image: chugoku },  
+    { name: 'Isla Sado', image: kansai}  
 ];
 
 const RegionCarrusel = () => {

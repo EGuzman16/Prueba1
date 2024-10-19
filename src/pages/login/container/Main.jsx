@@ -8,16 +8,10 @@ const Main = () => {
             
             <form>
                 <label className='block mb-2'>Email*</label>
-                <input 
-                    type='email' 
-                    className='block w-full mb-4 p-2 rounded-full bg-[#F2F2F2]' 
-                />
+                <input type='email' className='block w-full mb-4 p-2 rounded-full bg-[#F2F2F2]'/>
                 
                 <label className='block mb-2'>Contraseña*</label>
-                <input 
-                    type='password' 
-                    className='block w-full mb-4 p-2 rounded-full bg-[#F2F2F2]' 
-                />
+                <input type='password' className='block w-full mb-4 p-2 rounded-full bg-[#F2F2F2]'/>
                 
                 <div className='flex items-center justify-between mb-4'>
                     <label className='flex items-center'>
