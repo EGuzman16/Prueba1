@@ -50,7 +50,7 @@ const RegionCarrusel = () => {
     };
 
     return (
-        <div className="region-carousel my-12 bg-white">
+        <div className="region-carousel my-12 p-6 bg-white">
             <h2 className="text-left mb-4 text-2xl">Navega por región</h2>
             <span className="block mb-8">Encuentra tus atractivos y restaurantes favoritos en la región que más te llame la atención.</span>
             <Slider {...settings}>

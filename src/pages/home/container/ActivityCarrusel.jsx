@@ -38,7 +38,7 @@ const ActivityCarrusel = () => {
     const currentCards = cards.slice(startIndex, startIndex + cardsPerPage);
 
     return (
-        <div className="activity-carousel my-12" style={{ backgroundColor: '#CDD9E1' }}>
+        <div className="activity-carousel my-12 p-6" style={{ backgroundColor: '#CDD9E1' }}>
             <h2 className="text-left pt-4 mb-4 text-2xl">Actividades populares</h2>
             <div className="cards-container flex justify-center flex-wrap p-6">
                 {currentCards.map((card, index) => (

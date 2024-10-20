@@ -19,7 +19,7 @@ const Hero = () => {
                     Buscar
                 </button>
             </div>
-            </div>
+            </div> 
         </div>
     );
 }

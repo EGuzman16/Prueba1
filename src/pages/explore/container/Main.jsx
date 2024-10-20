@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import HorizontalCard from '../../../components/HorizontalCard';
 import Paginator from '../../../components/Paginator';
 import { BiSortUp, BiSortDown } from "react-icons/bi";
+
+const categories = ['Todo', 'Actractivos', 'Restaurantes', 'Hoteles'];
 
 const SortComponent = ({ sortOrder, handleSortOrderChange }) => {
     return (
@@ -41,20 +44,17 @@ const Main = () => {
         <div className='ml-3 mr-4'>
             <h2 className="text-2xl ml-1 mb-4">Resultados de la búsqueda :</h2>
             <div className="flex flex-col md:flex-row justify-between items-start mb-4 ml-3">
-                <div className="flex flex-row">
-                    <button className="border border-[#FA5564] text-[#FA5564] bg-white hover:bg-[#FA5564] hover:text-white rounded-l px-4 py-2">
-                        Todo
-                    </button>
-                    <button className="border border-[#FA5564] text-[#FA5564] bg-white hover:bg-[#FA5564] hover:text-white px-4 py-2">
-                        Actractivos
-                    </button>
-                    <button className="border border-[#FA5564] text-[#FA5564] bg-white hover:bg-[#FA5564] hover:text-white px-4 py-2">
-                        Restaurantes
-                    </button>
-                    <button className="border border-[#FA5564] text-[#FA5564] bg-white hover:bg-[#FA5564] hover:text-white rounded-r px-4 py-2">
-                        Hoteles
-                    </button>
-                </div>
+            <div className="flex flex-row">
+                {categories.map((category, index) => (
+                    <Link
+                        key={category}
+                        to={`/${category.toLowerCase()}`}
+                        className={`border border-[#FA5564] text-[#FA5564] bg-white hover:bg-[#FA5564] hover:text-white px-4 py-2 ${index === 0 ? 'rounded-l' : ''} ${index === categories.length - 1 ? 'rounded-r' : ''}`}
+                    >
+                        {category}
+                    </Link>
+                ))}
+            </div>
                 <SortComponent sortOrder={sortOrder} handleSortOrderChange={handleSortOrderChange} />
             </div>
             <HorizontalCard sortOrder={sortOrder} />

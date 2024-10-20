@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { AiFillStar } from "react-icons/ai"
 import { LuMapPin } from "react-icons/lu"
-import { FaHeart, FaRegHeart } from "react-icons/fa"
-import ReviewBox from '../../../components/ReviewBox'
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import CommentsContainer from '../../../components/comments/CommentsContainer';
 
 const Main = () => {
     const [liked, setLiked] = useState(false);
@@ -21,7 +21,7 @@ const Main = () => {
     return (
         <div className="relative">
             <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                <h2>{data.title}</h2>
+                <h2 className='text-3xl'>{data.title}</h2>
                 <div 
                     className="p-2 rounded-full cursor-pointer mt-2 md:mt-0 w-12 h-12 flex items-center justify-center" 
                     style={{ 
@@ -48,7 +48,8 @@ const Main = () => {
             <p>{data.description}</p>
 
             <div className='mt-6'>
-<ReviewBox />
+                <h3 className='text-2xl'>Comentarios</h3>
+            <CommentsContainer  className="mt-10" loggineUserId="a"/>
             </div>
 
         </div>

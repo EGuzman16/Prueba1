@@ -6,7 +6,7 @@ import Aside from './container/Aside';
 import { FaTimes } from 'react-icons/fa';
 import { FaRegMap } from "react-icons/fa6";
 
-const DetailPage = () => {
+const ExperienceDetailPage = () => {
     const [isAsideVisible, setIsAsideVisible] = useState(false);
 
     const toggleAside = () => {
@@ -47,4 +47,4 @@ const DetailPage = () => {
     );
 };
 
-export default DetailPage;
+export default ExperienceDetailPage;

@@ -6,15 +6,7 @@ import { images } from '../constants';
 const navItemsInfo = [
     { name: 'Inicio', type: 'link', href: '#inicio' },
     { name: 'Nosotros', type: 'link', href: '#nosotros' },
-    {
-        name: 'Explora',
-        type: 'dropdown',
-        items: [
-            { title: 'Atractivos', href: '#atractivos' },
-            { title: 'Restaurantes', href: '#restaurantes' },
-            { title: 'Hoteles', href: '#hoteles' },
-        ],
-    },
+    { name: 'Explora', type: 'link', href: '#explora' },
     { name: 'Blog', type: 'link', href: '#blog' },
     { name: 'Contacto', type: 'link', href: '#contacto' },
 ];

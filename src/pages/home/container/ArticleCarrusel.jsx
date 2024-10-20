@@ -38,7 +38,7 @@ const ArticleCarrusel = () => {
     const currentCards = cards.slice(startIndex, startIndex + cardsPerPage);
 
     return (
-        <div className="article-carousel my-12">
+        <div className="article-carousel my-12 p-6">
             <h2 className="text-left pt-4 mb-4 text-2xl">Navega nuestras últimas noticias</h2>
             <div className="cards-container flex justify-center flex-wrap p-6">
                 {currentCards.map((card, index) => (

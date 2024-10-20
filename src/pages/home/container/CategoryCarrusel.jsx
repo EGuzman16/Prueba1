@@ -79,7 +79,7 @@ const CategoryCarousel = () => {
     };
 
     return (
-        <div className="category-carousel my-12">
+        <div className="category-carousel my-12 p-6">
             <h2 className="text-left mb-4 text-2xl">Navega por categoría</h2>
             <Slider {...settings}>
                 {categories.map((category, index) => (

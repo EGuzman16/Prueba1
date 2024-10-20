@@ -1,31 +1,33 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const latestPosts = [
   {
     id: 1,
     title: 'Primer Post',
-    date: '2023-10-01',
+    createdAt: '2023-01-28T15:35:53.607+0000',
     image: 'https://www.advantour.com/img/japan/images/index.jpg'
   },
   {
     id: 2,
     title: 'Segundo Post',
-    date: '2023-10-02',
+    createdAt: '2023-01-28T15:35:53.607+0000',
     image: 'https://www.advantour.com/img/japan/images/index.jpg'
   },
   {
     id: 3,
     title: 'Tercer Post',
-    date: '2023-10-03',
+    createdAt: '2023-01-28T15:35:53.607+0000',
     image: 'https://www.advantour.com/img/japan/images/index.jpg'
   },
   {
     id: 4,
     title: 'Cuarto Post',
-    date: '2023-10-04',
+    createdAt: '2023-01-28T15:35:53.607+0000',
     image: 'https://www.advantour.com/img/japan/images/index.jpg'
   }
 ]
+const tags = ['Cultura', 'Gatronomía', 'Viajes', 'Eventos', 'Novedades'];
 
 const Aside = () => {
   return (
@@ -39,7 +41,13 @@ const Aside = () => {
           </div>
           <div className='w-3/4'>
             <h3 className='text-[#0A0330] pl-2 mt-3'>{post.title}</h3>
-            <p className='text-gray-600 pl-2'>{post.date}</p>
+            <span className="text-gray-600 pl-2">
+                {new Date(post.createdAt).toLocaleDateString("es-ES", {
+                  day: "numeric",
+                  month: "short",
+                  year: "numeric",
+                })}
+              </span>
           </div>
         </div>
       ))}
@@ -47,16 +55,17 @@ const Aside = () => {
 <div className='mt-6 mb-6'>
 <spam className='mb-4 text-[#0A0330] text-2xl'> Tag populares:</spam>
 <div className="flex flex-wrap justify-center gap-2 mt-3">
-                {['Cultura', 'Gatronomía', 'Viajes', 'Eventos', 'Novedades'].map(tag => (
-                    <button 
-                        key={tag} 
-                        className="bg-[#0A0330] text-white px-4 py-2 rounded hover:bg-[#FF4A5A]"
-                    >
-                        {tag}
-                    </button>
-                ))}
-            </div>
-            </div>
+        {tags.map(tag => (
+            <Link
+                key={tag}
+                to={`/${tag.toLowerCase()}`}
+                className="bg-[#0A0330] text-white px-4 py-2 rounded hover:bg-[#FF4A5A]"
+            >
+                {tag}
+            </Link>
+        ))}
+    </div>
+            </div> 
 
     </div>
   )
